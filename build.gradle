@@ -1,33 +1,26 @@
 buildscript {
     repositories {
-        mavenCentral()
+        jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.0.0'
+        classpath 'com.android.tools.build:gradle:1.5.0'
     }
 }
 
-apply plugin: 'android-library'
-
-repositories {
-    mavenCentral()
-    maven {
-        url "http://repo.pageturner-reader.org"
-    }
-}
+apply plugin: 'com.android.library'
 
 dependencies {
     compile 'net.sourceforge.htmlcleaner:htmlcleaner:2.16'
-    compile 'com.osbcp.cssparser:cssparser:1.5'
+    compile 'com.osbcp:cssparser:1.7'
 }
 
 android {
-    compileSdkVersion 17
-    buildToolsVersion "19.1.0"
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
 
     defaultConfig {
-        minSdkVersion 7
-        targetSdkVersion 17
+        minSdkVersion 9
+        targetSdkVersion 21
     }
 }
 
