@@ -12,6 +12,7 @@ apply plugin: 'com.android.library'
 dependencies {
     compile 'net.sourceforge.htmlcleaner:htmlcleaner:2.16'
     compile 'com.osbcp:cssparser:1.7'
+    androidTestCompile 'org.testng:testng:6.9.6'
 }
 
 android {
