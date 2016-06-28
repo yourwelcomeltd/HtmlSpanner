@@ -1,5 +1,7 @@
 package net.nightwhistler.htmlspanner;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -20,15 +22,15 @@ public class TextUtil {
 		REPLACEMENTS.put("&nbsp;", "\u00A0");
 		REPLACEMENTS.put("&amp;", "&");
 		REPLACEMENTS.put("&quot;", "\"");
-		REPLACEMENTS.put("&cent;", "¬¢");
+		REPLACEMENTS.put("&cent;", "¢");
 		REPLACEMENTS.put("&lt;", "<");
 		REPLACEMENTS.put("&gt;", ">");
-		REPLACEMENTS.put("&sect;", "¬ß");
+		REPLACEMENTS.put("&sect;", "ß");
 
-        REPLACEMENTS.put("&ldquo;", "‚Äú");
-        REPLACEMENTS.put("&rdquo;", "‚Äù");
-        REPLACEMENTS.put("&lsquo;", "‚Äò");
-        REPLACEMENTS.put("&rsquo;", "‚Äô");
+        REPLACEMENTS.put("&ldquo;", "ì");
+        REPLACEMENTS.put("&rdquo;", "î");
+        REPLACEMENTS.put("&lsquo;", "ë");
+        REPLACEMENTS.put("&rsquo;", "í");
 
 		REPLACEMENTS.put("&ndash;", "\u2013");
 		REPLACEMENTS.put("&mdash;", "\u2014");
@@ -45,7 +47,7 @@ public class TextUtil {
 	 */
 	public static String replaceHtmlEntities(String aText,
 			boolean preserveFormatting) {
-		StringBuffer result = new StringBuffer();
+		/*StringBuffer result = new StringBuffer();
 
 		Map<String, String> replacements = new HashMap<String, String>(
 				REPLACEMENTS);
@@ -68,7 +70,8 @@ public class TextUtil {
             }
 		}
 		matcher.appendTail(result);
-		return result.toString();
+		return result.toString();*/
+		return StringEscapeUtils.unescapeHtml(aText);
 	}
 
 	private static String getReplacement(Matcher aMatcher,
