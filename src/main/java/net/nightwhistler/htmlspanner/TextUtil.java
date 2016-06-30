@@ -22,15 +22,15 @@ public class TextUtil {
 		REPLACEMENTS.put("&nbsp;", "\u00A0");
 		REPLACEMENTS.put("&amp;", "&");
 		REPLACEMENTS.put("&quot;", "\"");
-		REPLACEMENTS.put("&cent;", "¢");
+		REPLACEMENTS.put("&cent;", "¬¢");
 		REPLACEMENTS.put("&lt;", "<");
 		REPLACEMENTS.put("&gt;", ">");
-		REPLACEMENTS.put("&sect;", "ß");
+		REPLACEMENTS.put("&sect;", "¬ß");
 
-        REPLACEMENTS.put("&ldquo;", "ì");
-        REPLACEMENTS.put("&rdquo;", "î");
-        REPLACEMENTS.put("&lsquo;", "ë");
-        REPLACEMENTS.put("&rsquo;", "í");
+        REPLACEMENTS.put("&ldquo;", "‚Äú");
+        REPLACEMENTS.put("&rdquo;", "‚Äù");
+        REPLACEMENTS.put("&lsquo;", "‚Äò");
+        REPLACEMENTS.put("&rsquo;", "‚Äô");
 
 		REPLACEMENTS.put("&ndash;", "\u2013");
 		REPLACEMENTS.put("&mdash;", "\u2014");
