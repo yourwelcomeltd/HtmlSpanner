@@ -1,5 +1,7 @@
 package net.nightwhistler.htmlspanner;
 
+import org.apache.commons.lang.StringEscapeUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -45,7 +47,7 @@ public class TextUtil {
 	 */
 	public static String replaceHtmlEntities(String aText,
 			boolean preserveFormatting) {
-		StringBuffer result = new StringBuffer();
+		/*StringBuffer result = new StringBuffer();
 
 		Map<String, String> replacements = new HashMap<String, String>(
 				REPLACEMENTS);
@@ -68,7 +70,8 @@ public class TextUtil {
             }
 		}
 		matcher.appendTail(result);
-		return result.toString();
+		return result.toString();*/
+		return StringEscapeUtils.unescapeHtml(aText);
 	}
 
 	private static String getReplacement(Matcher aMatcher,
