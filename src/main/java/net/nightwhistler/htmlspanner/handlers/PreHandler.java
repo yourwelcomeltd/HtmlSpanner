@@ -37,7 +37,7 @@ import android.text.style.TypefaceSpan;
  */
 public class PreHandler extends TagNodeHandler {
 
-	private void getPlainText(StringBuffer buffer, Object node) {
+	private void getPlainText(StringBuilder buffer, Object node) {
 		if (node instanceof ContentNode) {
 
 			ContentNode contentNode = (ContentNode) node;
@@ -58,7 +58,7 @@ public class PreHandler extends TagNodeHandler {
 	public void handleTagNode(TagNode node, SpannableStringBuilder builder,
 			int start, int end, SpanStack spanStack) {
 
-		StringBuffer buffer = new StringBuffer();
+		StringBuilder buffer = new StringBuilder();
 		getPlainText(buffer, node);
 
 		builder.append(buffer.toString());
