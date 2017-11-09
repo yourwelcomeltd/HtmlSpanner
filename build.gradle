@@ -10,7 +10,7 @@ buildscript {
 apply plugin: 'com.android.library'
 
 dependencies {
-    compile 'net.sourceforge.htmlcleaner:htmlcleaner:2.19'
+    compile project(':HTMLCleaner')
     compile 'com.osbcp:cssparser:1.7'
     compile 'commons-lang:commons-lang:2.6'
     androidTestCompile 'org.testng:testng:6.11'
