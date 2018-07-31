@@ -10,15 +10,15 @@ buildscript {
 apply plugin: 'com.android.library'
 
 dependencies {
-    compile project(':HTMLCleaner')
-    compile 'com.osbcp:cssparser:1.7'
-    compile 'commons-lang:commons-lang:2.6'
-    androidTestCompile 'org.testng:testng:6.11'
+    implementation project(':HTMLCleaner')
+    implementation 'com.osbcp:cssparser:1.7'
+    implementation 'commons-lang:commons-lang:2.6'
+    androidTestImplementation 'org.testng:testng:6.11'
 }
 
 android {
     compileSdkVersion 26
-    buildToolsVersion '26.0.2'
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 9
