@@ -12,8 +12,8 @@ apply plugin: 'com.android.library'
 
 dependencies {
     implementation project(':HTMLCleaner')
-    implementation project(':osbcp-css-parser')
     implementation 'commons-lang:commons-lang:2.6'
+    implementation project(':osbcp-css-parser')
     androidTestImplementation 'org.testng:testng:6.11'
 }
 
