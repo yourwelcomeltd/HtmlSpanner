@@ -12,7 +12,7 @@ apply plugin: 'com.android.library'
 
 dependencies {
     implementation project(':HTMLCleaner')
-    implementation 'com.osbcp:cssparser:1.7'
+    implementation project(':osbcp-css-parser')
     implementation 'commons-lang:commons-lang:2.6'
     androidTestImplementation 'org.testng:testng:6.11'
 }
